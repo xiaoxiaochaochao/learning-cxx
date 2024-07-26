@@ -8,6 +8,7 @@ static unsigned long long fibonacci(int i) {
     static unsigned long long cache[96], cached;
     cache[0] = 0;
     cache[1] = 1;
+    cached = 2;
     // TODO: 设置正确的循环条件
     for (; cached<=i; ++cached) {
         cache[cached] = cache[cached - 1] + cache[cached - 2];
