@@ -16,7 +16,7 @@ public:
     }
 
     // TODO: 实现析构器，释放缓存空间
-    ~DynFibonacci(){delete[] cache};
+    ~DynFibonacci(){delete[] cache;}
 
     // TODO: 实现正确的缓存优化斐波那契计算
     size_t get(int i) {
@@ -44,4 +44,10 @@ int main(int argc, char **argv) {
     DynFibonacci const fib_ = fib;
     ASSERT(fib_.get(10) == fib.get(10), "Object cloned");
     return 0;
+}
+
+            return cache[i];
+        }
+        ASSERT(false, "i out of range");
+    }
 }

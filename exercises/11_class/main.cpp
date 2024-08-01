@@ -1,6 +1,6 @@
 #include "../exercise.h"
 class Fibonacci {
-    size_t cache[16];
+    size_t cache[16] = {0,1};
     int cached;
 
 public:
@@ -24,6 +24,5 @@ int main(int argc, char **argv) {
     std::cout << "fibonacci(10) = " << fib.get(10) << std::endl;
     return 0;
 }
-
 
 

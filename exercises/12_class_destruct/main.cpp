@@ -8,7 +8,7 @@ public:
     DynFibonacci(int capacity): cache(new size_t[capacity]{0, 1}), cached(2) {}
 
     // TODO: 实现析构器，释放缓存空间
-    ~DynFibonacci(){delete[] cache};
+    ~DynFibonacci(){delete[] cache;}
 
     // TODO: 实现正确的缓存优化斐波那契计算
     size_t get(int i) {
@@ -25,3 +25,4 @@ int main(int argc, char **argv) {
     std::cout << "fibonacci(10) = " << fib.get(10) << std::endl;
     return 0;
 }
+
