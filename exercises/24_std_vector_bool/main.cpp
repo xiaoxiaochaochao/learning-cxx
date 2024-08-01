@@ -1,4 +1,4 @@
-﻿#include "../exercise.h"
+#include "../exercise.h"
 #include <vector>
 
 // READ: std::vector <https://zh.cppreference.com/w/cpp/container/vector_bool>
@@ -13,12 +13,12 @@ int main(int argc, char **argv) {
     ASSERT(sizeof(vec) == 40, "Fill in the correct value.");
     {
         vec[20] = false;
-        ASSERT(?vec[20], "Fill in `vec[20]` or `!vec[20]`.");
+        ASSERT(!vec[20], "Fill in `vec[20]` or `!vec[20]`.");
     }
     {
         vec.push_back(false);
         ASSERT(vec.size() == 101, "Fill in the correct value.");
-        ASSERT(?vec[100], "Fill in `vec[100]` or `!vec[100]`.");
+        ASSERT(!vec[100], "Fill in `vec[100]` or `!vec[100]`.");
     }
     {
         auto ref = vec[30];

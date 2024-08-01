@@ -1,7 +1,11 @@
 #include "../exercise.h"
+
+// READ: 复制构造函数 <https://zh.cppreference.com/w/cpp/language/copy_constructor>
+
 class DynFibonacci {
     size_t *cache;
     int cached;
+    int capacity;
 
 public:
     // TODO: 实现动态设置容量的构造器
@@ -16,11 +20,13 @@ public:
     }
 
     // TODO: 实现析构器，释放缓存空间
-    ~DynFibonacci(){delete[] cache;}
+    ~DynFibonacci() {
+        delete[] cache;
+    }
 
     // TODO: 实现正确的缓存优化斐波那契计算
     size_t get(int i) {
-        for (; cached<=i; ++cached) {
+        for (; cached <= i; ++cached) {
             cache[cached] = cache[cached - 1] + cache[cached - 2];
         }
         return cache[i];
@@ -44,10 +50,4 @@ int main(int argc, char **argv) {
     DynFibonacci const fib_ = fib;
     ASSERT(fib_.get(10) == fib.get(10), "Object cloned");
     return 0;
-}
-
-            return cache[i];
-        }
-        ASSERT(false, "i out of range");
-    }
 }
