@@ -13,6 +13,6 @@ int main(int argc, char **argv) {
     ASSERT((std::is_same_v<decltype(hello), ?>), "Fill in the missing type.");
     ASSERT((std::is_same_v<decltype(world), ?>), "Fill in the missing type.");
     // TODO: 将 `?` 替换为正确的字符串
-    ASSERT(hello + ", " + world + '!' == "?", "Fill in the missing string.");
+    ASSERT(hello + ", " + world + '!' == "Hello, world!", "Fill in the missing string.");
     return 0;
 }
